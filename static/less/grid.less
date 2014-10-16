@@ -1,0 +1,65 @@
+/**
+* grid
+*/
+
+// Remove padding on widths
+*, *:after, *:before {
+  margin: 0px;
+  padding: 0px;
+  .box-sizing(border-box);
+}
+
+[class*='col-'] {
+  float: left;
+  padding: @col-padding;
+}
+
+[class*='col-']:last-of-type {
+  float: right;
+  padding-right: @col-padding;
+}
+
+.clearfix {
+  clear: both;
+  content: "";
+  display: table;
+}
+
+// Clearfix
+.row:after {
+  &:extend(.clearfix);
+}
+
+// Loop that generates column widths
+.col-loop(@index) when (@index > 0) {
+  @number: @rows - @index + 1;
+  @base: 100% / @rows;
+
+  // Desktop
+  .col-@{number} {
+    width: @number * @base;
+  }
+  
+  // Tablet
+  @media (max-width: @tablet-width) { 
+    .col-@{number} {
+      width: 100%;
+    }
+  }
+
+  // Mobile
+  @media (max-width: @mobile-width) {
+    .col-@{number} {
+      width: 100%;
+    }
+  }
+
+  .col-loop(@index - 1);
+}
+
+// Base condition
+.col-loop(0) {}
+
+// Call the loop @rows number of times
+.col-loop(@rows);
+
