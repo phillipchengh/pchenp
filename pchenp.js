@@ -9,4 +9,8 @@ app.get('/', function(req, res) {
   res.sendFile(__dirname + '/static/index.html');
 });
 
+app.get('/resume', function(req, res) {
+  res.sendFile(__dirname + '/assets/resume.pdf');
+});
+
 app.listen(port);

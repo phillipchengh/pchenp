@@ -10,6 +10,7 @@ html, body {
 
 body {
   background-color: @dark-blue;
+  color: white;
   font-family: @font-family;
 }
 
@@ -27,6 +28,12 @@ body {
   width: 100%;
 }
 
+.bottom {
+  position: relative;
+  bottom: 5%;
+  text-align: right;
+}
+
 .center {
   margin: 0 auto;
   position: relative;
@@ -34,10 +41,15 @@ body {
   text-align: center;
 }
 
-.text {
-  color: white;
-  font-size: @text-font-size;
-  font-style: @text-font-style;
+.greeting {
+  color: @greeting-color;
+  font-size: @greeting-font-size;
+  letter-spacing: @greeting-letter-spacing;
+
+  @media (max-width: @mobile-width) {
+    font-size: @greeting-mobile-font-size;
+  }
+
 }
 
 .name {
@@ -49,6 +61,17 @@ body {
   .text-shadow(@name-text-shadow);
 
   @media (max-width: @mobile-width) {
-    font-size: 36px;
+    font-size: @name-mobile-font-size;
   }
+
+}
+
+.links {
+  margin: @links-margin;
+}
+
+.link {
+  color: @link-color;
+  display: inline-block;
+  padding: @link-padding;
 }
