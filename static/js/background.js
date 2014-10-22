@@ -1,6 +1,7 @@
 function background(height, width) {
 
   this.reset_background = function() {
+    context.clearRect(0, 0, width, height);
     this.starzus = [];
     for (var i = 0; i < 25; i++) {
       var starzu = new star(height, width);

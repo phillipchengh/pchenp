@@ -10,12 +10,17 @@ $(document).ready(function() {
     $canvas.attr('width', width);
     var back = new background(height, width);
     back.reset_background();
-    setInterval(function() {
+    interval_id = setInterval(function() {
       back.draw_background();
     }, 60);
   }
 
-  $(window).resize(draw_stuff);
+  $(window).resize(function() {
+    if (interval_id) {
+      clearInterval(interval_id);
+    }
+    draw_stuff();  
+  });
 
   draw_stuff();
 });
