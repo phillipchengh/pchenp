@@ -315,3 +315,13 @@ table {
     width: 100%;
   }
 }
+.background-wrapper {
+  text-align: center;
+}
+#background {
+  border: 1px solid black;
+  overflow: hidden;
+}
+body {
+  background-color: grey;
+}
