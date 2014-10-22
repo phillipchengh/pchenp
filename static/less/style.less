@@ -42,8 +42,12 @@ a {
 .center {
   margin: 0 auto;
   position: relative;
-  top: 50%;
+  top: @center-top;
   text-align: center;
+  
+  @media (max-width: @mobile-width) {
+    top: @center-mobile-top;
+  }
 }
 
 .greeting {
@@ -67,6 +71,7 @@ a {
 
   @media (max-width: @mobile-width) {
     font-size: @name-mobile-font-size;
+    line-height: @name-mobile-line-height;
   }
 
 }

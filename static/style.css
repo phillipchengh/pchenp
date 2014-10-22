@@ -353,6 +353,11 @@ a {
   top: 50%;
   text-align: center;
 }
+@media (max-width: 480px) {
+  .center {
+    top: 25%;
+  }
+}
 .greeting {
   color: #9d9da5;
   font-size: 32px;
@@ -374,6 +379,7 @@ a {
 @media (max-width: 480px) {
   .name {
     font-size: 36px;
+    line-height: 1.2;
   }
 }
 .links {
