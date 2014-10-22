@@ -14,6 +14,10 @@ body {
   font-family: @font-family;
 }
 
+a {
+  text-decoration: none;
+}
+
 #background {
   overflow: hidden;
   left: 0;
@@ -74,4 +78,9 @@ body {
   color: @link-color;
   display: inline-block;
   padding: @link-padding;
+  .transition(@link-transition);
+}
+
+.link:hover {
+  color: @link-hover-color;
 }

@@ -326,6 +326,9 @@ body {
   color: white;
   font-family: "jaf-bernino-sans", "Lucida Grande", "Lucida Sans Unicode", "Lucida Sans", Geneva, Verdana, sans-serif;
 }
+a {
+  text-decoration: none;
+}
 #background {
   overflow: hidden;
   left: 0;
@@ -373,10 +376,18 @@ body {
   }
 }
 .links {
-  margin: 10px;
+  margin: 24px;
 }
 .link {
   color: #9d9da5;
   display: inline-block;
   padding: 5px;
+  -webkit-transition: color 0.3s ease 0;
+  -moz-transition: color 0.3s ease 0;
+  -o-transition: color 0.3s ease 0;
+  -ms-transition: color 0.3s ease 0;
+  transition: color 0.3s ease 0;
+}
+.link:hover {
+  color: #ff5252;
 }
