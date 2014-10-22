@@ -319,9 +319,8 @@ table {
   text-align: center;
 }
 #background {
-  border: 1px solid black;
   overflow: hidden;
 }
 body {
-  background-color: grey;
+  background-color: #0a0a1e;
 }
