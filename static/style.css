@@ -327,6 +327,7 @@ body {
   font-family: "jaf-bernino-sans", "Lucida Grande", "Lucida Sans Unicode", "Lucida Sans", Geneva, Verdana, sans-serif;
 }
 a {
+  outline: 0;
   text-decoration: none;
 }
 #background {
