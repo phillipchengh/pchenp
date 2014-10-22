@@ -4,8 +4,8 @@ $(document).ready(function() {
   $canvas = $('#background');
 
   function draw_stuff() {
-    var height = $(window).height() - 20; 
-    var width = $(window).width() - 20;
+    var height = $(window).height(); 
+    var width = $(window).width();
     $canvas.attr('height', height);
     $canvas.attr('width', width);
     var back = new background(height, width);

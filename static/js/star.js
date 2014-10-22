@@ -1,14 +1,19 @@
 function star(height, width) {
 
+  var COLOR = '255,82,82';
+
   this.settings = {
-    life_time: 20000,
+    life_time: 10000,
     x_speed: 5,
     y_speed: 2,
-    max_radius: 20,
+    max_radius: 14,
     ratio: 1,
-    color1: '255,255,255',
-    color2: '77,101,181',
-    color3: '77,101,181'
+    color1: '255,82,82',
+    // color2: '77,101,181',
+    color2: '34,34,52',
+    // color2: '10,10,30',
+    color3: '34,34,52'
+    // color3: '10,10,30'
   };
 
   this.reset = function() {

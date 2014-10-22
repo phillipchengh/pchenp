@@ -2,14 +2,53 @@
 @import (less) "mixins.less";
 @import (less) "grid.less";
 
-.background-wrapper {
-  text-align: center;
-}
-
-#background {
-  overflow: hidden;
+html, body {
+  height: 100%;
+  margin: 0;
+  padding: 0;
 }
 
 body {
   background-color: @dark-blue;
+  font-family: @font-family;
+}
+
+#background {
+  overflow: hidden;
+  left: 0;
+  position: fixed;
+  top: 0;
+  z-index: -1;
+}
+
+.everything {
+  height: 100%;
+  position: relative;
+  width: 100%;
+}
+
+.center {
+  margin: 0 auto;
+  position: relative;
+  top: 50%;
+  text-align: center;
+}
+
+.text {
+  color: white;
+  font-size: @text-font-size;
+  font-style: @text-font-style;
+}
+
+.name {
+  color: @orange;
+  font-size: @name-font-size;
+  font-weight: @name-font-weight;
+  line-height: @name-line-height;
+  letter-spacing: @name-letter-spacing;
+  .text-shadow(@name-text-shadow);
+
+  @media (max-width: @mobile-width) {
+    font-size: 36px;
+  }
 }

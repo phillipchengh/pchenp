@@ -315,12 +315,49 @@ table {
     width: 100%;
   }
 }
-.background-wrapper {
-  text-align: center;
-}
-#background {
-  overflow: hidden;
+html,
+body {
+  height: 100%;
+  margin: 0;
+  padding: 0;
 }
 body {
   background-color: #0a0a1e;
+  font-family: "jaf-bernino-sans", "Lucida Grande", "Lucida Sans Unicode", "Lucida Sans", Geneva, Verdana, sans-serif;
+}
+#background {
+  overflow: hidden;
+  left: 0;
+  position: fixed;
+  top: 0;
+  z-index: -1;
+}
+.everything {
+  height: 100%;
+  position: relative;
+  width: 100%;
+}
+.center {
+  margin: 0 auto;
+  position: relative;
+  top: 50%;
+  text-align: center;
+}
+.text {
+  color: white;
+  font-size: 24px;
+  font-style: italic;
+}
+.name {
+  color: #ff5252;
+  font-size: 56px;
+  font-weight: 700;
+  line-height: 1.5;
+  letter-spacing: -0.02em;
+  text-shadow: 1px 1px 1px #ff5252;
+}
+@media (max-width: 480px) {
+  .name {
+    font-size: 36px;
+  }
 }
